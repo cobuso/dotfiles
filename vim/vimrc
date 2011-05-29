@@ -1,0 +1,147 @@
+" Lots of inspiration from http://bitbucket.org/sjl/dotfiles/src
+
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
+
+set nocompatible
+
+runtime macros/matchit.vim        " Load the matchit plugin.
+
+" Security - turn off mode lines
+set modelines=0
+
+" Tabs and Spaces
+set ts=2 sts=2 sw=2 expandtab
+
+" The Basics
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set noshowcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell            " Dont beep at me
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2          " Last window always has status line
+                                              
+" Backups and Swap Files - Where do they go!
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+set nobackup
+
+" Leader - remap to ,
+let mapleader = ","
+
+" Searches
+nnoremap / /\v    " Use sane regexes in searches
+vnoremap / /\v
+set ignorecase    " Ignore case
+set smartcase     " If one or more uppercase chars in search, search case-sens
+set gdefault      " Default is substitutions globally on lines (g option)
+set incsearch     
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Line wrapping
+set nowrap
+set textwidth=72
+set formatoptions=qrn
+
+" Use Textmate style invisibles
+set nolist
+set listchars=tab:▸\ ,eol:¬
+
+" Color scheme (terminal)
+syntax on
+set background=dark
+colorscheme delek
+
+" Make me do the Right Thing(tm)
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+" Time saver
+nnoremap ; :
+
+" Save when losing focus...
+au FocusLost * :wa
+
+" Ack
+map <leader>a :Ack 
+
+" Edit .vimrc
+nnoremap <leader>ev :e $MYVIMRC<cr>
+nnoremap <leader>sv :so $MYVIMRC<cr>
+
+" Easy buffer navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <leader>w <C-w>v<C-w>l
+
+" Map NERDTree toggle onto F2
+"map <F2> :NERDTreeToggle<CR>         
+map <leader>n :NERDTreeToggle<CR>         
+
+" Useful status information at bottom of screen
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
+" Sudo to write
+cmap w!! w !sudo tee % >/dev/null
+
+" Yankring
+nnoremap <silent> <F3> :YRShow<cr>
+nnoremap <silent> <leader>y :YRShow<cr>
+
+" <leader>v to re-select just pasted text
+nnoremap <leader>v v`]
+
+" Get back to normal mode from insert mode with jj 
+inoremap jj <ESC>
+
+" tpl files are essentially html
+au BufNewFile,BufRead *.tpl set filetype=html
+
+if has('gui_running')
+    set guifont=Menlo:h12
+    set antialias
+    colorscheme twilight
+    set lines=50 columns=100
+    set background=dark
+
+    set go-=T
+    set go-=l
+    set go-=L
+    set go-=r
+    set go-=R
+
+    set colorcolumn=85
+    set relativenumber        " Show relative line numbers
+
+endif
+
+" Open up a browser window for PHP documentation
+function OpenPHPManual(keyword)
+  let url = 'http://www.php.net/' . a:keyword
+  exec '!open "' . url . '"'
+endfunction
+noremap gd :call OpenPHPManual(expand('<cword>'))<CR>
