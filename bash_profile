@@ -7,7 +7,7 @@ alias vh="vagrant halt"
 alias vssh="vagrant ssh"
 
 alias g="git"
-alias gs="git status"
+alias gs="git status --ignore-submodules=dirty"
 alias gp="git pull"
 alias gpush="git push"
 

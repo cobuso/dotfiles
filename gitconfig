@@ -1,3 +1,6 @@
 [user]
 	name = Tom Cowan
 	email = tom@cobuso.co.uk
+
+[alias]
+  st = status --ignore-submodules=dirty
