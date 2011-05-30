@@ -40,12 +40,13 @@ set nobackup
 let mapleader = ","
 
 " Searches
-nnoremap / /\v    " Use sane regexes in searches
+"  - Sane regexes
+nnoremap / /\v
 vnoremap / /\v
 set ignorecase    " Ignore case
 set smartcase     " If one or more uppercase chars in search, search case-sens
 set gdefault      " Default is substitutions globally on lines (g option)
-set incsearch     
+set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
@@ -98,8 +99,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>w <C-w>v<C-w>l
 
-" Map NERDTree toggle onto F2
-"map <F2> :NERDTreeToggle<CR>         
+" NERDTree Mappings
 map <leader>n :NERDTreeToggle<CR>         
 
 " Useful status information at bottom of screen
