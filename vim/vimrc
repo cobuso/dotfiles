@@ -109,6 +109,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 cmap w!! w !sudo tee % >/dev/null
 
 " Yankring
+let g:yankring_history_dir = '~/.vim/tmp/yankring'
 nnoremap <silent> <F3> :YRShow<cr>
 nnoremap <silent> <leader>y :YRShow<cr>
 

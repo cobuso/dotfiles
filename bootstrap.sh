@@ -15,6 +15,7 @@ ln -s $HOME/dotfiles/vim $HOME/.vim
 ln -s $HOME/dotfiles/vim/sparkup/vim $HOME/dotfiles/vim/bundle/sparkup
 mkdir -p $HOME/.vim/tmp/backup
 mkdir -p $HOME/.vim/tmp/swap 
+mkdir -p $HOME/.vim/tmp/yankring 
 
 # Bash config
 ln -s $HOME/dotfiles/bash_profile $HOME/.bash_profile
