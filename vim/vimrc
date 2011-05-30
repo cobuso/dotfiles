@@ -118,6 +118,9 @@ nnoremap <leader>v v`]
 " Get back to normal mode from insert mode with jj 
 inoremap jj <ESC>
 
+" Gundo mappings
+nnoremap <F4> :GundoToggle<CR>
+
 " tpl files are essentially html
 au BufNewFile,BufRead *.tpl set filetype=html
 
