@@ -31,9 +31,6 @@
 [submodule "vim/bundle/zencoding"]
 	path = vim/bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
-[submodule "vim/bundle/smarty"]
-	path = vim/bundle/smarty
-	url = https://github.com/vim-scripts/smarty.vim.git
 [submodule "vim/bundle/checksyntax"]
 	path = vim/bundle/checksyntax
 	url = https://github.com/tomtom/checksyntax_vim.git
