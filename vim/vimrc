@@ -1,5 +1,6 @@
 " Lots of inspiration from http://bitbucket.org/sjl/dotfiles/src
 
+filetype on
 filetype off
 call pathogen#infect()
 call pathogen#helptags()

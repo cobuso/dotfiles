@@ -12,6 +12,7 @@ alias gp="git pull"
 alias gpush="git push"
 
 export PATH="~/projects/git-deploy/bin:~/projects/cobuso/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications:$PATH"
+export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
 
 export RUBYOPT=rubygems
 export COPYFILE_DISABLE=true

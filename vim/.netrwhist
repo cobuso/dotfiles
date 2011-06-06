@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/tom/Desktop/test'
-let g:netrw_dirhist_2='/Users/tom/projects/plinkfizz/plinkfizz-bcc/site'
-let g:netrw_dirhist_3='/Users/tom/projects/jt/matlab/site'
