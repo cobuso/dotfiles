@@ -25,3 +25,6 @@ ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
 
 # Ack
 ln -s $HOME/dotfiles/ackrc $HOME/.ackrc
+
+# OSX Lion sensible defaults
+. $HOME/dotfiles/osx
