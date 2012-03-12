@@ -1,6 +1,6 @@
 alias flushdns="sudo dscacheutil -flushcache"
 
-alias vim="mvim"
+#alias vim="mvim"
 
 alias vu="vagrant up"
 alias vh="vagrant halt"
@@ -10,6 +10,8 @@ alias g="git"
 alias gs="git status --ignore-submodules=dirty"
 alias gp="git pull"
 alias gpush="git push"
+
+alias scheme="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources/mit-scheme"
 
 export PATH="~/projects/git-deploy/bin:~/projects/cobuso/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications:$PATH"
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"

@@ -20,6 +20,9 @@ mkdir -p $HOME/.vim/tmp/yankring
 # Bash config
 ln -s $HOME/dotfiles/bash_profile $HOME/.bash_profile
 
+# TMUX
+ln -s $HOME/dotfiles/tmux $HOME/.tmux.conf
+
 # Git
 ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig 
 

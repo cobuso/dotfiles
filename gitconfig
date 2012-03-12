@@ -6,3 +6,4 @@
   st = status --ignore-submodules=dirty
 [core]
 	editor = /usr/bin/vim
+	quotepath = false
