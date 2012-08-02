@@ -1,11 +1,12 @@
 ZSH=$HOME/dotfiles/oh-my-zsh
 
-ZSH_THEME="sunrise"
+ZSH_THEME="dallas"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 plugins=(git git-flow osx rvm tmux vagrant)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh_aliases
 
 export PATH="~/projects/git-deploy/bin:~/projects/cobuso/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications:$PATH"
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
@@ -13,5 +14,3 @@ export EDITOR=vim
 export TERM=xterm-256color
 
 setopt extended_glob
-
-
