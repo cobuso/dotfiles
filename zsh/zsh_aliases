@@ -16,3 +16,6 @@ alias duh='du -h --max-depth=1'
 alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vssh="vagrant ssh"
+
+# git
+alias gs="git status"
