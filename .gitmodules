@@ -31,3 +31,6 @@
 [submodule "vim/bundle/checksyntax"]
 	path = vim/bundle/checksyntax
 	url = https://github.com/tomtom/checksyntax_vim.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/cobuso/oh-my-zsh.git

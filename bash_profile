@@ -1,10 +1,10 @@
 alias flushdns="sudo dscacheutil -flushcache"
 
-#alias vim="mvim"
-
 alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vssh="vagrant ssh"
+
+alias r="rspec spec"
 
 alias g="git"
 alias gs="git status --ignore-submodules=dirty"
