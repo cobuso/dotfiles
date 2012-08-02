@@ -18,3 +18,6 @@ bind-key k select-pane -U
 bind-key j select-pane -D
 bind-key h select-pane -L
 bind-key l select-pane -R
+
+# start numbering at 1
+set -g base-index 1
