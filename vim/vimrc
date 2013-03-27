@@ -192,6 +192,7 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Syntastic
 let g:syntastic_auto_loc_list=1   " Always open location list if errors detected
+let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " vimwiki
 let g:vimwiki_list = [{'path' : "~/Dropbox/Wiki/", 'path_html' : '~/Dropbox/Wiki/HTML/'}]
