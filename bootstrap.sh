@@ -36,6 +36,7 @@ create_sym $PWD/vim $HOME/.vim
 create_sym $PWD/vim/sparkup/bin $PWD/vim/bundle/sparkup
 mkdir -p $HOME/.vim/tmp/backup
 mkdir -p $HOME/.vim/tmp/swap 
+mkdir -p $HOME/.vim/tmp/undo 
 mkdir -p $HOME/.vim/tmp/yankring 
 
 # Bash config
