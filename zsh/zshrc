@@ -18,6 +18,9 @@ setopt extended_glob
 # RVM
 [[ -s "/Users/tom/.rvm/scripts/rvm" ]] && source "/Users/tom/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+# Tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
 # Fast git completion
 __git_files () { 
     _wanted files expl 'local files' _files     

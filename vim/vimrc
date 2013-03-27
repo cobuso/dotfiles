@@ -1,43 +1,64 @@
-" Lots of inspiration from http://bitbucket.org/sjl/dotfiles/src
-
-filetype on
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
-
 set nocompatible
-
-runtime macros/matchit.vim        " Load the matchit plugin.
-
-" Security - turn off mode lines
-set modelines=0
 
 " Tabs and Spaces
 set ts=2 sts=2 sw=2 expandtab
 
-" The Basics
+" Basics
 set encoding=utf-8
-set scrolloff=3
+set modelines=0
 set autoindent
 set showmode
-set noshowcmd
+set showcmd
 set hidden
-set wildmenu
-set wildmode=list:longest
-set visualbell            " Dont beep at me
-set cursorline
+set visualbell
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-set laststatus=2          " Last window always has status line
+set relativenumber
+set laststatus=2
+set history=1000
+set cursorline
+set splitbelow
+set splitright
+set shiftround
+set synmaxcol=1000
+set scrolloff=3
+
+"" Wildmenu
+set wildmenu
+set wildmode=list:longest
+set wildignore+=.git
+set wildignore+=*.jpg,*.bmp,*.gid,*.png,*.jpeg
+set wildignore+=.DS_Store
+
+" Time out on key codes but not mappings
+set notimeout
+set ttimeout
+set ttimeoutlen=10
                                               
-" Backups and Swap Files - Where do they go!
+" Backups/ Swap file locations
+set backup
+set noswapfile
+set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
-set nobackup
 
-" Leader - remap to ,
+" Create above dirs if they don't already exist
+if !isdirectory(expand(&undodir))
+  call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+  call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+  call mkdir(expand(&directory), "p")
+endif
+
+" remap to leader ,
 let mapleader = ","
 
 " Searches
@@ -51,8 +72,6 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
 " Line wrapping
 set nowrap
@@ -66,7 +85,7 @@ set listchars=tab:▸\ ,eol:¬
 " Color scheme (terminal)
 syntax on
 
-" Make me do the Right Thing(tm)
+" Make me do the Right Thing
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -75,21 +94,32 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" Move by visual lines rather than logical ones
 nnoremap j gj
 nnoremap k gk
 
 " Time saver
 nnoremap ; :
 
-" Save when losing focus...
+" Save when losing focus
 au FocusLost * :wa
+
+" Quick-save file in normal mode with Enter
+nnoremap <CR> :w<CR>
+
+" Clean trailing whitespace
+nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " Ack
 map <leader>a :Ack 
 
-" Edit .vimrc
+" Quick edit/reload .vimrc
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
+
+" Resize splits when window resized
+au VimResized * :wincmd =
 
 " Easy buffer navigation
 map <C-h> <C-w>h
@@ -98,14 +128,8 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>w <C-w>v<C-w>l
 
-" NERDTree Mappings
-map <leader>n :NERDTreeToggle<CR>         
-
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
-
-" Sudo to write
-cmap w!! w !sudo tee % >/dev/null
 
 " Yankring
 let g:yankring_history_dir = '~/.vim/tmp/yankring'
@@ -118,36 +142,12 @@ nnoremap <leader>v v`]
 " Get back to normal mode from insert mode with jj 
 inoremap jj <ESC>
 
-" Gundo mappings
-nnoremap <F4> :GundoToggle<CR>
-
 " tpl files are essentially html
 au BufNewFile,BufRead *.tpl set filetype=html
 
-if has('gui_running')
-    set guifont=Menlo:h12
-    set antialias
-    set lines=50 columns=100
-    set background=dark
-    colorscheme twilight
-
-    set go-=T
-    set go-=l
-    set go-=L
-    set go-=r
-    set go-=R
-
-    set colorcolumn=85
-    set relativenumber        " Show relative line numbers
-
-    " Fullscreen Action!
-    set fuopt+=maxhorz                      " grow to maximum horizontal width on entering fullscreen mode
-
-else
-    set relativenumber        " Show relative line numbers
-    set background=dark
-    colorscheme twilight
-endif
+" color
+set background=dark
+colorscheme solarized
 
 " Open up a browser window for PHP documentation
 function OpenPHPManual(keyword)
@@ -156,5 +156,15 @@ function OpenPHPManual(keyword)
 endfunction
 noremap gd :call OpenPHPManual(expand('<cword>'))<CR>
 
-map <Help> <Esc>
-map! <Help> <Esc>
+
+if has('gui_running')
+  " Vim in a GUI??!
+
+  " Remove all the UI crap
+  set go-=T
+  set go-=l
+  set go-=L
+  set go-=r
+  set go-=R
+
+endif

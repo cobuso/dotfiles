@@ -5,6 +5,7 @@
 [alias]
   st = status --ignore-submodules=dirty
 	co = checkout
+  aa = add --all
 [core]
 	editor = /usr/bin/vim
 	quotepath = false
