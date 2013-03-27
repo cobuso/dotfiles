@@ -20,7 +20,7 @@ function create_sym() {
 }
 
 #
-# Bootsteaps my config. Assumes it is being called from the directory where it resides
+# Bootstraps my config. Assumes it is being called from the directory where it resides
 #
 if [ ! -f README ]
 then
