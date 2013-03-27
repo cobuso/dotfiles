@@ -1,8 +1,17 @@
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vuncle manage Vundle (required)
+Bundle 'gmarik/vundle'
+" My bundles
+Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/Command-T'
+Bundle 'mileszs/ack.vim'
+
+filetype plugin indent on
 
 " Tabs and Spaces
 set ts=2 sts=2 sw=2 expandtab
