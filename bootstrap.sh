@@ -30,6 +30,10 @@ fi
 
 PWD=$(pwd)
 
+# Init git submodules
+git submodule init
+git submodule update
+
 # Bootstrap the vim config
 create_sym $PWD/vim/vimrc $HOME/.vimrc
 create_sym $PWD/vim $HOME/.vim
