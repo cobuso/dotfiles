@@ -20,3 +20,4 @@ alias vssh="vagrant ssh"
 # git
 alias gs="git status"
 alias gaa="git add --all"
+alias gl='git log --oneline --graph'

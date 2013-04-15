@@ -19,6 +19,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'vimwiki'
+Bundle 'mv/mv-vim-puppet'
 
 filetype plugin indent on
 
