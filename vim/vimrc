@@ -20,6 +20,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'vimwiki'
 Bundle 'mv/mv-vim-puppet'
+Bundle 'joonty/vdebug.git'
 
 filetype plugin indent on
 
@@ -123,9 +124,6 @@ nnoremap ; :
 
 " Save when losing focus
 au FocusLost * :wa
-
-" Quick-save file in normal mode with Enter
-nnoremap <CR> :w<CR>
 
 " Clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
