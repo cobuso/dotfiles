@@ -61,4 +61,6 @@ create_sym $PWD/ackrc $HOME/.ackrc
 ln -s $HOME/dotfiles/ackrc $HOME/.ackrc
 
 # OSX Lion sensible defaults
-. $PWD/osx
+if [ "$(uname)" = "Darwin" ]; then
+  . $PWD/osx
+fi
