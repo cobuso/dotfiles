@@ -1,3 +1,4 @@
 --type-set=tpl=.tpl
 --type-set=asp=.asp
- --ignore-dir=uploads
+--type-set=template=.template
+--ignore-dir=uploads

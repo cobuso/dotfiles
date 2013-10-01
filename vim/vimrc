@@ -21,6 +21,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'vimwiki'
 Bundle 'mv/mv-vim-puppet'
 Bundle 'joonty/vdebug.git'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
@@ -195,3 +196,6 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " vimwiki
 let g:vimwiki_list = [{'path' : "~/Dropbox/Wiki/", 'path_html' : '~/Dropbox/Wiki/HTML/'}]
+
+" VDebug
+let g:vdebug_options = { 'path_maps' : { "/projects": "/Users/tom/projects" } }

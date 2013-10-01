@@ -8,7 +8,7 @@ plugins=(git git-flow osx rvm tmux vagrant)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
 
-export PATH="$HOME/projects/git-deploy/bin:$HOME/projects/cobuso/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications:$PATH"
+export PATH="/usr/local/share/npm/bin:$HOME/projects/git-deploy/bin:$HOME/projects/cobuso/archive/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications:$PATH"
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
 export EDITOR=vim
 export TERM=xterm-256color

@@ -15,9 +15,13 @@ alias duh='du -h --max-depth=1'
 # vagrant
 alias vu="vagrant up"
 alias vh="vagrant halt"
+alias vs="vagrant suspend"
 alias vssh="vagrant ssh"
 
 # git
 alias gs="git status"
 alias gaa="git add --all"
-alias gl='git log --oneline --graph'
+alias gl='git lg --graph'
+
+# bower
+alias bower='noglob bower'
