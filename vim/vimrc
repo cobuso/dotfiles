@@ -17,11 +17,14 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/YankRing.vim'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'vimwiki'
 Bundle 'mv/mv-vim-puppet'
 Bundle 'joonty/vdebug.git'
 Bundle 'kchmck/vim-coffee-script'
+
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 
 filetype plugin indent on
 
@@ -192,10 +195,13 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Syntastic
 let g:syntastic_auto_loc_list=1   " Always open location list if errors detected
-let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_mode_map = { 'passive_filetypes': ['html','java'] }
 
 " vimwiki
 let g:vimwiki_list = [{'path' : "~/Dropbox/Wiki/", 'path_html' : '~/Dropbox/Wiki/HTML/'}]
 
 " VDebug
 let g:vdebug_options = { 'path_maps' : { "/projects": "/Users/tom/projects" } }
+
+" Dash
+noremap <leader>d :Dash<CR>
