@@ -61,7 +61,7 @@ create_sym $PWD/gitconfig $HOME/.gitconfig
 
 # Ack
 create_sym $PWD/ackrc $HOME/.ackrc
-ln -s $HOME/dotfiles/ackrc $HOME/.ackrc
+ln -s $HOME/Dotfiles/ackrc $HOME/.ackrc
 
 # OSX Lion sensible defaults
 if [ "$(uname)" = "Darwin" ]; then
