@@ -3,8 +3,12 @@ alias flushdns="sudo dscacheutil -flushcache"
 alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vssh="vagrant ssh"
+alias vp="vagrant provision"
 
 alias r="rspec spec"
+
+alias vi='mvim -v'
+alias vim='mvim -v'
 
 alias g="git"
 alias gs="git status --ignore-submodules=dirty"
@@ -21,6 +25,3 @@ export COPYFILE_DISABLE=true
 
 # RVM
 [[ -s "/Users/tom/.rvm/scripts/rvm" ]] && source "/Users/tom/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-# Virtualbox Zombies
-alias nobrains='sudo /Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh restart'
