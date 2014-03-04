@@ -72,6 +72,9 @@ set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 
+" Use unnamed clipboard (for OSX copy/pasting)
+set clipboard=unnamed
+
 " Create above dirs if they don't already exist
 if !isdirectory(expand(&undodir))
   call mkdir(expand(&undodir), "p")
