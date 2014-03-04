@@ -17,6 +17,7 @@ alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vs="vagrant suspend"
 alias vssh="vagrant ssh"
+alias vp="vagrant provision"
 
 # git
 alias gs="git status"
