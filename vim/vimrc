@@ -209,3 +209,6 @@ let g:vdebug_options = { 'path_maps' : { "/projects": "/Users/tom/projects" } }
 
 " Dash
 noremap <leader>d :Dash<CR>
+
+" Command-T
+set wildignore+="uploads"
