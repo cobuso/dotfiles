@@ -17,11 +17,17 @@ alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vs="vagrant suspend"
 alias vssh="vagrant ssh"
+alias vp="vagrant provision"
 
 # git
+alias g="git"
 alias gs="git status"
 alias gaa="git add --all"
 alias gl='git lg --graph'
 
 # bower
 alias bower='noglob bower'
+
+# vim
+alias vi='mvim -v'
+alias vim='mvim -v'
