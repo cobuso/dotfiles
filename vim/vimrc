@@ -4,7 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Let Vuncle manage Vundle (required)
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+" Let Vundle manage Vundle (required)
 Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'tpope/vim-fugitive'

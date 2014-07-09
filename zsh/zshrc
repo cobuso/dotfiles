@@ -23,6 +23,7 @@ __git_files () {
 }
 
 # rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
