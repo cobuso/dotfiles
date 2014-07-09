@@ -24,3 +24,15 @@ __git_files () {
 
 # rbenv
 eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# virtualenvwrapper
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+if [ ! -d ~/Envs ]; then
+  mkdir ~/Envs
+fi
+export WORKON_HOME=~/Envs
