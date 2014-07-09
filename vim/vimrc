@@ -23,7 +23,7 @@ Bundle 'mv/mv-vim-puppet'
 Bundle 'joonty/vdebug.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
-
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
