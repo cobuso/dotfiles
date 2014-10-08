@@ -1,4 +1,4 @@
-ZSH=$HOME/dotfiles/oh-my-zsh
+ZSH=$HOME/Dotfiles/oh-my-zsh
 
 ZSH_THEME="tc"
 CASE_SENSITIVE="true"
@@ -37,3 +37,6 @@ if [ ! -d ~/Envs ]; then
   mkdir ~/Envs
 fi
 export WORKON_HOME=~/Envs
+
+# tmuxinator completion
+source ~/Dotfiles/zsh/completion/tmuxinator.zsh
