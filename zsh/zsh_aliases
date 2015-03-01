@@ -27,7 +27,3 @@ alias gl='git lg --graph'
 
 # bower
 alias bower='noglob bower'
-
-# vim
-alias vi='mvim -v'
-alias vim='mvim -v'

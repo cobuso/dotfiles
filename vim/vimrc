@@ -30,7 +30,12 @@ Bundle 'groenewege/vim-less'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'luochen1990/rainbow'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
 
+syntax on
 filetype plugin indent on
 
 " Tabs and Spaces
@@ -114,8 +119,6 @@ set formatoptions=qrn
 set nolist
 set listchars=tab:▸\ ,eol:¬
 
-" Color scheme (terminal)
-syntax on
 
 " Make me do the Right Thing
 nnoremap <up> <nop>
@@ -176,7 +179,7 @@ au BufNewFile,BufRead *.tpl set filetype=html
 
 " color
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " Open up a browser window for PHP documentation
 function OpenPHPManual(keyword)
@@ -213,6 +216,9 @@ let g:vdebug_options = { 'path_maps' : { "/projects": "/Users/tom/projects" } }
 
 " Dash
 noremap <leader>d :Dash<CR>
+
+" Rainbow Parens
+let g:rainbow_active = 1
 
 " Command-T
 set wildignore+="uploads"
