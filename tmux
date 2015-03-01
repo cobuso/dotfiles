@@ -2,7 +2,7 @@
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # 256-color
-set -g default-terminal "screen-256color"
+set -g default-terminal "xterm"
 
 # status bar
 set -g status-interval 60 # Refresh every 60 seconds
