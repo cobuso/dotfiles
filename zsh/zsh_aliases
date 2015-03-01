@@ -27,6 +27,3 @@ alias gl='git lg --graph'
 
 # bower
 alias bower='noglob bower'
-
-# tmux
-alias tmux="TERM=screen-256-color-bce tmux"

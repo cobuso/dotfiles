@@ -10,7 +10,7 @@ source $HOME/.zsh_aliases
 
 export PATH="$HOME/Tools/git-deploy/bin:$HOME/Tools/reattach-to-user-namespace/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR=vim
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 setopt extended_glob
 
