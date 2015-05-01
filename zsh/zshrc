@@ -40,5 +40,7 @@ export WORKON_HOME=~/Envs
 
 # tmuxinator completion
 source ~/Dotfiles/zsh/completion/tmuxinator.zsh
+export DISABLE_AUTO_TITLE=true
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
