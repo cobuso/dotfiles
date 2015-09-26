@@ -1,0 +1,10 @@
+- Need to install tools if they are not already present:
+  - mafro's sesame.sh
+  - tmuxinator
+  - rvm
+  - virtualenvwrapper
+  - git-deploy
+- Bootstrap homebrew and install required tools
+  - reattach-to-user-namespace
+  - ack
+  - neovim
