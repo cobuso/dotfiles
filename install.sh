@@ -36,6 +36,7 @@ git submodule update
 
 # Bootstrap the vim config
 create_sym $PWD/vim/vimrc $HOME/.vimrc
+create_sym $PWD/vim/ideavimrc $HOME/.ideavimrc
 create_sym $PWD/vim $HOME/.vim
 create_sym $PWD/vim/sparkup/bin $PWD/vim/bundle/sparkup
 mkdir -p $HOME/.vim/tmp/backup
