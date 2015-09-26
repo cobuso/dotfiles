@@ -1,0 +1,18 @@
+# Function to add a symlink. Stolen from mafro (https://github.com/mafrosis/dotfiles)
+function create_sym() {
+  if [ -h "$2" ]; then
+    # if symlink exists, replace it
+    ln -fs "$1" "$2"
+  elif [ -f "$2" ]; then
+    # if a file exists, ask user
+    echo "Do you want to delete the existing config file '$2'? [y/N]"
+    read y
+    if [ y == "y" ]; then
+      # replace existing file
+      ln -fs "$1" "$2"
+    fi
+  else
+    # doesnt exist, so create
+    ln -s "$1" "$2"
+  fi
+}

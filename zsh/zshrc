@@ -1,16 +1,15 @@
-ZSH=$HOME/Dotfiles/oh-my-zsh
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-ZSH_THEME="tc"
-CASE_SENSITIVE="true"
-DISABLE_AUTO_UPDATE="true"
-plugins=(git git-flow osx rvm tmux vagrant)
 
-source $ZSH/oh-my-zsh.sh
+
+
 source $HOME/.zsh_aliases
 
 export PATH="$HOME/Tools/git-deploy/bin:$HOME/Tools/sesame.sh:$HOME/Tools/reattach-to-user-namespace/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR=vim
-#export TERM=xterm-256color
 
 setopt extended_glob
 
@@ -21,9 +20,6 @@ setopt extended_glob
 __git_files () { 
     _wanted files expl 'local files' _files     
 }
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # virtualenvwrapper
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
@@ -38,5 +34,6 @@ export WORKON_HOME=~/Envs
 source ~/Dotfiles/zsh/completion/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
 
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-

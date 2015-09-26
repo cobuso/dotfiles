@@ -1,27 +1,5 @@
 #!/bin/bash
 
-# Function to add a symlink. Stolen from mafro (https://github.com/mafrosis/dotfiles)
-function create_sym() {
-  if [ -h "$2" ]; then
-    # if symlink exists, replace it
-    ln -fs "$1" "$2"
-  elif [ -f "$2" ]; then
-    # if a file exists, ask user
-    echo "Do you want to delete the existing config file '$2'? [y/N]"
-    read y
-    if [ y == "y" ]; then
-      # replace existing file
-      ln -fs "$1" "$2"
-    fi
-  else
-    # doesnt exist, so create
-    ln -s "$1" "$2"
-  fi
-}
-
-#
-# Bootstraps my config. Assumes it is being called from the directory where it resides
-#
 if [ ! -f README ]
 then
   echo "You must execute this script from the root of the dotfiles repo"
@@ -30,44 +8,48 @@ fi
 
 PWD=$(pwd)
 
-# Init git submodules
-git submodule init
-git submodule update
+source $PWD/utils/functions
 
-# Bootstrap the vim config
+git submodule update --init --recursive
+
+# osx
+if [ "$(uname)" = "Darwin" ]; then
+  . $PWD/osx/sensible_defaults
+  . $PWD/osx/homebrew
+fi
+
+# Vim - config
 create_sym $PWD/vim/vimrc $HOME/.vimrc
 create_sym $PWD/vim/ideavimrc $HOME/.ideavimrc
 create_sym $PWD/vim $HOME/.vim
-create_sym $PWD/vim/sparkup/bin $PWD/vim/bundle/sparkup
+
+# Vim - dirs
 mkdir -p $HOME/.vim/tmp/backup
 mkdir -p $HOME/.vim/tmp/swap 
 mkdir -p $HOME/.vim/tmp/undo 
 mkdir -p $HOME/.vim/tmp/yankring 
 
-# install Vundle plugins
+# Vim - vundle
 vim +BundleInstall +qall
 
-# Bash config
-create_sym $PWD/bash_profile $HOME/.bash_profile
-
-# ZSH
+# zsh
+create_sym $PWD/prezto $HOME/.zprezto
 create_sym $PWD/zsh/zshrc $HOME/.zshrc
 create_sym $PWD/zsh/zsh_aliases $HOME/.zsh_aliases
+create_sym $PWD/zsh/zlogin $HOME/.zlogin
+create_sym $PWD/zsh/zlogout $HOME/.zlogout
+create_sym $PWD/zsh/zpreztorc $HOME/.zpreztorc
+create_sym $PWD/zsh/zprofile $HOME/.zprofile
+create_sym $PWD/zsh/zshenv $HOME/.zshenv
 
-# TMUX
-create_sym $PWD/tmux $HOME/.tmux.conf
+# tmux
+create_sym $PWD/tmux/tmux.conf $HOME/.tmux.conf
 
-# Git
-create_sym $PWD/gitconfig $HOME/.gitconfig
+# git
+create_sym $PWD/git/gitconfig $HOME/.gitconfig
 
-# Ack
-create_sym $PWD/ackrc $HOME/.ackrc
-ln -s $HOME/Dotfiles/ackrc $HOME/.ackrc
+# ack
+create_sym $PWD/ack/ackrc $HOME/.ackrc
 
-# Editorconfig
-create_sym $PWD/editorconfig $HOME/.editorconfig
-
-# OSX Lion sensible defaults
-if [ "$(uname)" = "Darwin" ]; then
-  . $PWD/osx
-fi
+# editorconfig
+create_sym $PWD/editorconfig/editorconfig $HOME/.editorconfig
