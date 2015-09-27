@@ -34,6 +34,7 @@ Bundle 'luochen1990/rainbow'
 Bundle 'tpope/vim-fireplace'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
+Bundle 'joonty/vdebug.git'
 
 syntax on
 filetype plugin indent on
