@@ -27,6 +27,10 @@ create_sym $PWD/vim $HOME/.vim
 create_sym $PWD/vim/vimrc $HOME/.nvimrc
 create_sym $PWD/vim $HOME/.nvim
 
+# Vimperator
+create_sym $PWD/vim/vimperatorrc $HOME/.vimperatorrc
+create_sym $PWD/vim $HOME/.nvim
+
 # Vim - dirs
 mkdir -p $HOME/.vim/tmp/backup
 mkdir -p $HOME/.vim/tmp/swap 
