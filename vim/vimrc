@@ -12,7 +12,6 @@ endif
 Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'tpope/vim-fugitive'
-Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
@@ -35,6 +34,7 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 Bundle 'joonty/vdebug.git'
+Bundle 'ctrlpvim/ctrlp.vim'
 
 syntax on
 filetype plugin indent on
@@ -213,7 +213,7 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['html','java'] }
 let g:vimwiki_list = [{'path' : "~/Dropbox/Wiki/", 'path_html' : '~/Dropbox/Wiki/HTML/'}]
 
 " VDebug
-let g:vdebug_options = { 'path_maps' : { "/projects": "/Users/tom/projects" } }
+let g:vdebug_options = { "path_maps": { "/Projects": "/Users/tom/Projects" } }
 
 " Dash
 noremap <leader>d :Dash<CR>
@@ -221,5 +221,6 @@ noremap <leader>d :Dash<CR>
 " Rainbow Parens
 let g:rainbow_active = 1
 
-" Command-T
+" CtrlP
 set wildignore+="uploads"
+
