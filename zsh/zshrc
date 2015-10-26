@@ -34,6 +34,5 @@ export WORKON_HOME=~/Envs
 source ~/Dotfiles/zsh/completion/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# rbenv
+eval "$(rbenv init -)"
