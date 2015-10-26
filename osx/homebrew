@@ -9,14 +9,20 @@ brew install caskroom/cask/brew-cask
 # Some homebrew action...
 brew install ack \
 	dnsmasq \
+	mysql \
 	python \
 	reattach-to-user-namespace \
 	tmux \
 	tree \
 	zsh \
 	rbenv \
-	ruby-build
-		
+	ruby-build \
+	libxml2 \
+	libxslt
+
+brew link libxml2 --force
+brew link libxslt --force
+
 # Some Neovim
 brew tap neovim/neovim
 brew install --HEAD neovim
