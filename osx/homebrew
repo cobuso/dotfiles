@@ -18,14 +18,11 @@ brew install ack \
 	rbenv \
 	ruby-build \
 	libxml2 \
-	libxslt
+	libxslt \
+  vim
 
 brew link libxml2 --force
 brew link libxslt --force
-
-# Some Neovim
-brew tap neovim/neovim
-brew install --HEAD neovim
 
 # And now lets get some casks
 brew cask install 1password \
