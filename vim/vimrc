@@ -28,6 +28,10 @@ Bundle 'groenewege/vim-less'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'ctrlpvim/ctrlp.vim'
 
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+
 syntax on
 filetype plugin indent on
 
