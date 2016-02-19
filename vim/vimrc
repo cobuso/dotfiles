@@ -22,18 +22,10 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'vimwiki'
-Bundle 'mv/mv-vim-puppet'
 Bundle 'joonty/vdebug.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'editorconfig/editorconfig-vim'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
-Bundle 'luochen1990/rainbow'
-Bundle 'tpope/vim-fireplace'
-Bundle 'guns/vim-clojure-static'
-Bundle 'guns/vim-clojure-highlight'
-Bundle 'joonty/vdebug.git'
 Bundle 'ctrlpvim/ctrlp.vim'
 
 syntax on
@@ -189,19 +181,6 @@ function OpenPHPManual(keyword)
 endfunction
 noremap gd :call OpenPHPManual(expand('<cword>'))<CR>
 
-
-if has('gui_running')
-  " Vim in a GUI??!
-
-  " Remove all the UI crap
-  set go-=T
-  set go-=l
-  set go-=L
-  set go-=r
-  set go-=R
-
-endif
-
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
@@ -214,12 +193,6 @@ let g:vimwiki_list = [{'path' : "~/Dropbox/Wiki/", 'path_html' : '~/Dropbox/Wiki
 
 " VDebug
 let g:vdebug_options = { "path_maps": { "/Projects": "/Users/tom/Projects" } }
-
-" Dash
-noremap <leader>d :Dash<CR>
-
-" Rainbow Parens
-let g:rainbow_active = 1
 
 " CtrlP
 set wildignore+="uploads"
