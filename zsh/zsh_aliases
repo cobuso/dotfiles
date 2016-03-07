@@ -31,3 +31,6 @@ alias gd='git diff'
 # vim - use Neovim
 alias vim='nvim'
 alias vi='nvim'
+
+# django
+alias dt='python manage.py test --settings=api.settings.test'
