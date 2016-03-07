@@ -1,0 +1,62 @@
+# Get me some homebrew
+if ! command -v brew >/dev/null 2>&1; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Get me some cask
+brew install caskroom/cask/brew-cask
+
+# Some homebrew action...
+brew install ack \
+	dnsmasq \
+	mysql \
+	python \
+	reattach-to-user-namespace \
+	tmux \
+	tree \
+	zsh \
+	rbenv \
+	ruby-build \
+	libxml2 \
+	libxslt \
+  vim
+
+brew link libxml2 --force
+brew link libxslt --force
+
+# And now lets get some casks
+brew cask install 1password \
+	alfred \
+	atom \
+	charles \
+	chefdk \
+	cord \
+	dropbox \
+	ember \
+	evernote \
+	firefox \
+	google-chrome \
+	fluid \
+	google-adwords-editor \
+	grandperspective \
+	integrity \
+	pycharm \
+	istumbler \
+	iterm2 \
+	kindle \
+	mailplane \
+	notational-velocity \
+	postico \
+	seil \
+	selfcontrol \
+	sequel-pro \
+	sitesucker \
+	slack \
+	soulver \
+	spotify \
+	textmate \
+	transmission \
+	transmit \
+	virtualbox \
+	vmware-fusion \
+	vagrant

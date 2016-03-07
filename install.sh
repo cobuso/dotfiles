@@ -23,10 +23,6 @@ create_sym $PWD/vim/vimrc $HOME/.vimrc
 create_sym $PWD/vim/ideavimrc $HOME/.ideavimrc
 create_sym $PWD/vim $HOME/.vim
 
-# Neovim
-create_sym $PWD/vim/vimrc $HOME/.nvimrc
-create_sym $PWD/vim $HOME/.nvim
-
 # Vimperator
 create_sym $PWD/vim/vimperatorrc $HOME/.vimperatorrc
 create_sym $PWD/vim $HOME/.nvim
