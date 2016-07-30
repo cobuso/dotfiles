@@ -3,15 +3,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-
-
-
 source $HOME/.zsh_aliases
 
 export PATH="$HOME/Tools/git-deploy/bin:$HOME/Tools/sesame.sh:$HOME/Tools/reattach-to-user-namespace/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR=vim
 
 setopt extended_glob
+
+# Long history!
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
 
 # Tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
