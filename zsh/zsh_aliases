@@ -34,3 +34,4 @@ alias vi='nvim'
 
 # django
 alias dt='python manage.py test --settings=api.settings.test'
+alias ds='python manage.py shell_plus'
