@@ -28,10 +28,7 @@ alias gaa='git aa'
 alias gl='git lg --graph'
 alias gd='git diff'
 
-# vim - use Neovim
-alias vim='nvim'
-alias vi='nvim'
-
 # django
 alias dt='python manage.py test --settings=api.settings.test'
+alias dtk='python manage.py test --settings=api.settings.test --keepdb'
 alias ds='python manage.py shell_plus'
