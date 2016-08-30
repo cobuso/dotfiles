@@ -32,26 +32,18 @@ brew cask install 1password \
 	chefdk \
 	cord \
 	dropbox \
-	ember \
-	evernote \
 	firefox \
 	google-chrome \
 	fluid \
-	google-adwords-editor \
 	grandperspective \
 	integrity \
-	pycharm \
 	istumbler \
 	iterm2 \
 	kindle \
-	mailplane \
 	notational-velocity \
-	postico \
 	seil \
-	selfcontrol \
 	sequel-pro \
 	sitesucker \
-	slack \
 	soulver \
 	spotify \
 	textmate \
