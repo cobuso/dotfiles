@@ -32,3 +32,6 @@ alias gd='git diff'
 alias dt='python manage.py test --settings=api.settings.test'
 alias dtk='python manage.py test --settings=api.settings.test --keepdb'
 alias ds='python manage.py shell_plus'
+
+# tmux
+alias mux='tmuxinator'
