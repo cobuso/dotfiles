@@ -22,11 +22,11 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'vimwiki'
-Bundle 'joonty/vdebug.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'leafgarland/typescript-vim'
 
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
@@ -187,6 +187,7 @@ noremap gd :call OpenPHPManual(expand('<cword>'))<CR>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\~$', '\.pyc$']
 
 " Syntastic
 let g:syntastic_auto_loc_list=1   " Always open location list if errors detected
