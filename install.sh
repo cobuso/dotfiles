@@ -14,7 +14,7 @@ git submodule update --init --recursive
 
 # osx
 if [ "$(uname)" = "Darwin" ]; then
-  . $PWD/osx/sensible_defaults
+  #. $PWD/osx/sensible_defaults
   . $PWD/osx/homebrew
 fi
 
@@ -29,9 +29,9 @@ create_sym $PWD/vim $HOME/.nvim
 
 # Vim - dirs
 mkdir -p $HOME/.vim/tmp/backup
-mkdir -p $HOME/.vim/tmp/swap 
-mkdir -p $HOME/.vim/tmp/undo 
-mkdir -p $HOME/.vim/tmp/yankring 
+mkdir -p $HOME/.vim/tmp/swap
+mkdir -p $HOME/.vim/tmp/undo
+mkdir -p $HOME/.vim/tmp/yankring
 
 # Vim - vundle
 vim +BundleInstall +qall
