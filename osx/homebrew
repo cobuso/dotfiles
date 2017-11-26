@@ -19,7 +19,7 @@ brew install ack \
 	ruby-build \
 	libxml2 \
 	libxslt \
-  vim
+	vim
 
 brew link libxml2 --force
 brew link libxslt --force
@@ -40,11 +40,11 @@ brew cask install 1password \
 	kindle \
 	notational-velocity \
 	sequel-pro \
-	sitesucker \
 	soulver \
 	spotify \
 	textmate \
 	transmit \
 	virtualbox \
 	vmware-fusion \
-	vagrant
+	vagrant \
+	visual-studio-code
