@@ -29,8 +29,6 @@ brew cask install 1password \
 	alfred \
 	atom \
 	charles \
-	chefdk \
-	cord \
 	dropbox \
 	firefox \
 	google-chrome \
