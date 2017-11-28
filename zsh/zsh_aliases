@@ -13,12 +13,9 @@ alias la='ls -Alh'
 alias duh='du -h -d 1'
 
 # vagrant
-alias vu="vagrant up"
-alias vmu="vagrant up --provider vmware_fusion"
+alias vu="vagrant up --provider vmware_fusion"
 alias vh="vagrant halt"
-alias vs="vagrant suspend"
 alias vssh="vagrant ssh"
-alias vp="vagrant provision"
 
 # git
 # - Also see .gitconfig

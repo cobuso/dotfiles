@@ -7,10 +7,20 @@ fi
 brew install caskroom/cask/brew-cask
 
 # Some homebrew action...
+brew tap homebrew/homebrew-php
+brew cask install caskroom/versions/java8 # For elasticsearch
 brew install ack \
-	dnsmasq \
+	ansible \
+	ctags \
+	elasticsearch \
+	libmemcached \
+	memcached \
 	mysql \
+	node \
+	php72 \
 	python \
+	python3 \
+	rabbitmq \
 	reattach-to-user-namespace \
 	tmux \
 	tree \
@@ -19,7 +29,10 @@ brew install ack \
 	ruby-build \
 	libxml2 \
 	libxslt \
-	vim
+	vim \
+	xapian \
+	wget \
+	openssl
 
 brew link libxml2 --force
 brew link libxslt --force
@@ -29,6 +42,7 @@ brew cask install 1password \
 	alfred \
 	atom \
 	charles \
+	chefdk \
 	dropbox \
 	firefox \
 	google-chrome \
@@ -44,7 +58,5 @@ brew cask install 1password \
 	spotify \
 	textmate \
 	transmit \
-	virtualbox \
-	vmware-fusion \
 	vagrant \
 	visual-studio-code
