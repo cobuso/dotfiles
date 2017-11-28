@@ -18,14 +18,14 @@ if [ "$(uname)" = "Darwin" ]; then
 fi
 
 # Vim - config
-create_sym $PWD/vim/vimrc $HOME/.vimrc
 create_sym $PWD/vim $HOME/.vim
+create_sym $PWD/vim/vimrc $HOME/.vimrc
 
 # Vim - dirs
-mkdir -p $HOME/.vim/tmp/backup
-mkdir -p $HOME/.vim/tmp/swap
-mkdir -p $HOME/.vim/tmp/undo
-mkdir -p $HOME/.vim/tmp/yankring
+mkdir -p $PWD/vim/tmp/backup
+mkdir -p $PWD/vim/tmp/swap
+mkdir -p $PWD/vim/tmp/undo
+mkdir -p $PWD/vim/tmp/yankring
 
 # Vim - vundle
 vim +BundleInstall +qall
