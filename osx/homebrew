@@ -32,7 +32,9 @@ brew install ack \
 	vim \
 	xapian \
 	wget \
-	openssl
+	openssl \
+  pyenv \
+  pyenv-virtualenvwrapper
 
 brew link libxml2 --force
 brew link libxslt --force

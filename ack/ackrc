@@ -3,3 +3,4 @@
 --type-set=template=.template
 --ignore-dir=uploads
 --ignore-dir=log
+--ignore-dir=public/media

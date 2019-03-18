@@ -45,3 +45,6 @@ create_sym $PWD/ack/ackrc $HOME/.ackrc
 
 # editorconfig
 create_sym $PWD/editorconfig/editorconfig $HOME/.editorconfig
+
+# ssh
+create_syn $PWD/ssh/ssh_config $HOME/.ssh/config
