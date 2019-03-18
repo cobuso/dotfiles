@@ -32,3 +32,6 @@ alias ds='python manage.py shell_plus'
 
 # tmux
 alias mux='tmuxinator'
+
+# vim
+alias vim='nvim' # use neovim
