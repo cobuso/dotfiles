@@ -1,6 +1,13 @@
 source $HOME/.zsh_aliases
 
-export PATH="/usr/local/opt/mysql@5.7/bin:$HOME/Tools/git-deploy/bin:$HOME/Tools/sesame.sh:$HOME/Tools/reattach-to-user-namespace/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$HOME/Tools/git-deploy/bin:$HOME/Tools/sesame.sh:$HOME/Tools:$HOME/Tools/reattach-to-user-namespace/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export EDITOR=vim
 
 setopt extended_glob
@@ -18,7 +25,6 @@ __git_files () {
     _wanted files expl 'local files' _files     
 }
 
-
 # tmuxinator completion
 source ~/Dotfiles/zsh/completion/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
@@ -28,9 +34,6 @@ autoload -Uz vcs_info
 precmd () { vcs_info }
 setopt prompt_subst
 PS1="\$vcs_info_msg_0_%m %c %# "
-
-# Android stuff
-export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"
